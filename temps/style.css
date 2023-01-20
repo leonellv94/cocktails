@@ -10,7 +10,7 @@ body {
     font-family: 'Merriweather', serif;
     background-image: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
 }
 
 .navBar {
@@ -20,7 +20,7 @@ body {
     z-index: 1000;
     height: 80px;
     position: fixed;
-    background-image: linear-gradient(to bottom, rgb(248, 11, 11), rgba(253, 6, 6, 0.005));
+    /* background-image: linear-gradient(to bottom, rgb(248, 11, 11), rgba(253, 6, 6, 0.005)); */
     /* background-image: linear-gradient(to bottom, rgb(248, 11, 11), rgba(253, 6, 6, 0.005)); */
 }
 
@@ -81,7 +81,7 @@ body {
     display: grid;
     height: max-content;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px 0px;
+    gap: 50px;
 }
 
 h3 {
@@ -89,7 +89,7 @@ h3 {
     font-size: 30px;
     font-style: oblique;
     border-radius: 15px;
-    color: black;
+    color: white;
     /* background-image: linear-gradient(to bottom, rgb(245, 44, 44), rgb(245, 62, 62)); */
 }
 
@@ -104,7 +104,7 @@ h3 {
 }
 
 #drinks li {
-    color: black;
+    color: white;
 
 }
 #drinks li {
@@ -112,13 +112,13 @@ h3 {
 }
 
 #drinks li:hover {
-    color: white;
+    color: red;
     transform: scale(1.05);
     text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
     z-index: 0;
 }
 
-#drinks li:hover > *:first-child {
+#drinks li:hover > *:nth-child(2) {
     box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
 }
 
@@ -126,6 +126,7 @@ h3 {
     width: 150px;
     border-radius: 15px;
     transition: .5s;
+    align-self: center;
 }
 
 .filter_btn{
@@ -135,12 +136,11 @@ h3 {
     min-width: 800px;
     justify-content: space-between;
     padding: 0px 50px 100px 50px;
-
 }
 
 .links {
     color: white;
-    text-decoration: none;
+    text-align: center;
 }
 
 .links:hover {
