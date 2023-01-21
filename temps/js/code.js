@@ -8,7 +8,6 @@ let API_LIST_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
 let API_SEARCH = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const API_SEARCH_BACKUP = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const xhr = new XMLHttpRequest();
-const xhr2 = new XMLHttpRequest();
 const HTMLResponse = document.querySelector('#drinks')
 const ingredients = document.querySelector('.ingredients_container')
 const ingredientsQuantity = document.querySelector('.ingredients_quantity_container')
@@ -52,7 +51,6 @@ searchButton.addEventListener('click', (e) => {
 
     let inputContent = searchInput.value.toLowerCase()
     API_SEARCH = API_SEARCH.concat(inputContent)
-    console.log(API_SEARCH)
     xhr.open('GET', `${API_SEARCH}`)
     xhr.send()
 
@@ -120,16 +118,3 @@ xhr.addEventListener('load', onRequestHandler);
 xhr.open('GET', `${API_LIST_URL}`)
 xhr.send()
 
-
-
-
-
-function onRequestHandler2() {
-    if(this.readyState == 4 && this.status == 200) {
-        console.log(this.response)
-    }
-}
-
-xhr2.addEventListener('load', onRequestHandler2);
-xhr2.open('GET', `${API_SEARCH}`)
-xhr2.send()
