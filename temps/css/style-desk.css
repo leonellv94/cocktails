@@ -1,0 +1,29 @@
+@media screen and (min-width: 830px) {
+
+
+
+
+
+    .searchButton:hover{
+        cursor: pointer;
+    }
+
+    #drinks li:hover {
+        color: red;
+        transform: scale(1.1);
+        text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+        z-index: 0;
+    }
+    
+    #drinks li:hover > *:nth-child(2) {
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+    }
+    
+
+    
+    .links:hover {
+        cursor: pointer;
+        color: red;
+        transform: scale(1.2);
+    }
+}
