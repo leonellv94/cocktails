@@ -6,6 +6,7 @@ let searchInput = document.querySelector('.searchInput')
 let searchButton = document.querySelector('.searchButton')
 let API_LIST_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
 let API_SEARCH = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+const API_SEARCH_BACKUP = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const xhr = new XMLHttpRequest();
 const xhr2 = new XMLHttpRequest();
 const HTMLResponse = document.querySelector('#drinks')
@@ -55,6 +56,8 @@ searchButton.addEventListener('click', (e) => {
     xhr.open('GET', `${API_SEARCH}`)
     xhr.send()
 
+
+    API_SEARCH = API_SEARCH_BACKUP
     e.preventDefault()
 })
 
