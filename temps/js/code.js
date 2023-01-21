@@ -14,6 +14,8 @@ let drinks = []
 links.forEach((link) => {
     link.addEventListener('click', () => {
         HTMLResponse.innerHTML = '';
+        ingredients.innerHTML = '';
+        ingredientsQuantity.innerHTML = '';
         let alphabetLetter = link.innerHTML.toLowerCase()
         let arr = API_LIST_URL.split('')
         arr.pop()
