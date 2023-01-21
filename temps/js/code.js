@@ -50,11 +50,12 @@ function onRequestHandler() {
                 const dataDrinksInfo = Object.entries(data.drinks[i])
 
                 HTMLResponse.innerHTML = `
+                <div class='drink_description2'>
+                <h2 style="color:white;"> ${data.drinks[i].strDrink}</h2>
                 <div class='drink_description'>
                 <img src="${data.drinks[i].strDrinkThumb}">
                 </div>
-                <div class='drink_description2'>
-                <h2 style="color:white;"> ${data.drinks[i].strDrink}</h2><br>
+                <br>
                 <p style="color:white;">INSTRUCTIONS: ${data.drinks[i].strInstructions}</p>
                 </div>
                 <h2 class='ingredients__h2' style="color:white;">INGREDIENTS:</h3>

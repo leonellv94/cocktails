@@ -135,6 +135,7 @@ h1 {
 }
 
 .drink_description img{
+    padding: 50px 0px;
     width: 250px;
 }
 
@@ -155,6 +156,7 @@ h2 {
     justify-content: center;
     color: white;
     grid-column: 1/2;
+    height: 80px;
 }
 .ingredients{
     display: flex;
@@ -183,6 +185,7 @@ h2 {
     display: flex;
     color: white;
     justify-content: center;
+    height: 80px;
 }
 
 .filter_btn{
