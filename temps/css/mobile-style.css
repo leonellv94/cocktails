@@ -10,34 +10,63 @@
         gap: 50px;
     }
 
-    .navBar {
-        justify-content: space-between;
-    }
-
     .navBar_section{
         display: flex;
         flex-direction: column;
-        gap: 10px;
         min-width: 350px;
         width: 100%;
+        justify-content: space-between;
+    }
+
+    .logo{
+        align-self: left;
+    }
+    .navBar_content{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-image: linear-gradient(to bottom, rgba(255, 14, 6, 0.904),rgba(255, 187, 1, 0.849));
+    }
+    .fa-bars {
+        padding: 6px;
+        align-self: center;
+        transform: scale(1.8);
+    }
+    #btn_bar2{
+        display: none;
+    }
+
+    .fa-xmark{
+        padding: 6px;
+        align-self: center;
+        transform: scale(1.8);
     }
     .searchForm {
-        margin-top: 15px;
-        justify-content: center;
+        padding: 20px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 8px;
+        align-self: end;
+        background-image: linear-gradient(to bottom,rgba(255, 187, 1, 0.849), rgba(248, 197, 56, 0.384));
+        gap: 15px;
+        transform: translateX(-500px);
+        opacity: 0;
+        transition: 1s;
     }
     .content{
         min-width: 350px;
     }
-
+    .visibleMenu{
+        transform: translateX(0px);
+        opacity: 1;
+    }
     .drink {
         gap: 10px;
     }
 
     .main_content {
-        padding-top: 150px;
+        padding-top: 100px;
     }
-
-
 
     
 .filter_btn{

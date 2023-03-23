@@ -20,15 +20,40 @@ function scrolls() {
     window.scroll(0, 0)
 }
 
+
+////////////////////NAVBAR////////////////////   
+
+let navBarToggle = document.querySelector(".fa-bars")
+let navBarForm = document.querySelector(".searchForm")
+let navBarHide = document.querySelector(".fa-xmark")
+
+navBarToggle.addEventListener('click', () => {
+    navBarForm.classList.toggle('visibleMenu')
+    navBarHide.style.display = 'inline'
+    navBarToggle.style.display = 'none'
+})
+
+navBarHide.addEventListener('click', () => {
+    navBarForm.classList.toggle('visibleMenu')
+    navBarHide.style.display = 'none'
+    navBarToggle.style.display = 'inline'
+})
+
+
 ////////////////////ALPHABET ORDER //////////////////
+function clearScreen() {
+    HTMLResponse.innerHTML = '';
+    ingredients.innerHTML = '';
+    ingredientsQuantity.innerHTML = '';
+}
+
 
 
 links.forEach((link) => {
     link.addEventListener('click', () => {
         scrolls()
-        HTMLResponse.innerHTML = '';
-        ingredients.innerHTML = '';
-        ingredientsQuantity.innerHTML = '';
+        clearScreen()
+
         let alphabetLetter = link.innerHTML.toLowerCase()
         let arr = API_LIST_URL.split('')
         arr.pop()
@@ -45,12 +70,12 @@ links.forEach((link) => {
 
 searchButton.addEventListener('click', (e) => {
     scrolls()
-    HTMLResponse.innerHTML = ''
-    ingredients.innerHTML = '';
-    ingredientsQuantity.innerHTML = '';
+    clearScreen()
 
     let inputContent = searchInput.value.toLowerCase()
     API_SEARCH = API_SEARCH.concat(inputContent)
+
+
     xhr.open('GET', `${API_SEARCH}`)
     xhr.send()
 
